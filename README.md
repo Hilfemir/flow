@@ -1,6 +1,6 @@
 # ISA projekt - NetFlow Exporter
 
-**Autor:** Michal Blažek, xblaze34
+**Autor:** Michal Blažek, xblaze34  
 **Datum:** 2. 11. 2022
 
 ## Popis
