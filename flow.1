@@ -1,0 +1,50 @@
+.TH flow 1
+
+.SH NAME
+flow - NetFlow exporter for pcap files
+
+.SH SYNOPSIS
+.B ./flow
+[\fB\-f\fR \fIfile\fR]
+[\fB\-c\fR \fInetflow_collector\fR[:\fIport\fR]]
+[\fB\-a\fR \fIactive_timer\fR]
+[\fB\-i\fR \fIseconds\fR]
+[\fB\-m\fR \fIcount\fR]
+
+.SH DESCRIPTION
+.B flow
+is a NetFlow exporter that analyzes captured packets stored in a pcap file,
+agregates them into NetFlow records and sends these records to a NetFlow collector.
+
+.SH OPTIONS
+.TP
+.BR \-f " " \fI<file>\fR
+File containing captured packets.
+If no file is specified, reads input from stdin.
+
+.TP
+.BR \-c " " \fInetflow_collector\fR[:\fIport\fR]
+IP address or hostname of the NetFlow collector the flows will be exported to.
+Optionally bound to the specified UDP port.
+Default is 127.0.0.1:2055.
+
+.TP
+.BR \-a " " \fIactive_timer\fR
+Interval [seconds] after which active records are exported.
+Default is 60.
+
+.TP
+.BR \-i " " \fIseconds\fR
+Interval [seconds] after which inactive records are exported.
+Default is 10.
+
+.TP
+.BR \-m " " \fIcount\fR
+Size of the flow-cache. When the number is reached, the oldest flow record is exported.
+Default is 1024.
+
+.SH AUTHOR
+Written by Michal Blazek.
+
+.SH SEE ALSO
+nfdump(1), nfcapd(1), tcpdump(8)
