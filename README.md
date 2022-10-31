@@ -22,7 +22,7 @@
 
 ## Překlad
 
-`$ make` - Překlad projektu
+`$ make` - Překlad projektu  
 `$ make clean` - Vymazání přeloženého projektu
 
 ## Spuštění
@@ -39,5 +39,5 @@ Pořadí argumentů je libovolné, všechny argumenty jsou nepovinné.
 
 ## Příklady použití
 
-`./flow -f ./pcaps/file.pcap`
+`./flow -f ./pcaps/file.pcap`  
 `./flow -c localhost:5555 -a 30 -i 15 -m 64`
